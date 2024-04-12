@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'learm_node = learm.learm:main'
+            'learm_node = learm.learm:main',
+            'learm_teleop_keyboard = learm.learm_teleop_keyboard:main'
         ],
     },
 )
