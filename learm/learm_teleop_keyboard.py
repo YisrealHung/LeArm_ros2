@@ -24,18 +24,18 @@ CTRL-C to quit
 """
 
 moveBindings = {
-    'a': (1.1),
-    'z': (.9),
-    's': (1.1),
-    'x': (.9),
-    'd': (1.1),
-    'c': (.9),
-    'f': (1.1),
-    'v': (.9),
-    'g': (1.1),
-    'b': (.9),
-    'h': (1.1),
-    'n': (.9)
+    'a': (10),
+    'z': (-10),
+    's': (10),
+    'x': (-10),
+    'd': (10),
+    'c': (-10),
+    'f': (10),
+    'v': (-10),
+    'g': (10),
+    'b': (-10),
+    'h': (10),
+    'n': (-10)
 
 }
 
@@ -91,17 +91,17 @@ def main():
             key = getKey(settings)
             if key in moveBindings.keys():
                 if key == 'a' or key == 'z':
-                    s1 = round(s1 * moveBindings[key])
+                    s1 = round(s1 + moveBindings[key])
                 elif key == 's' or key == 'x':
-                    s2 = round(s2 * moveBindings[key])
+                    s2 = round(s2 + moveBindings[key])
                 elif key == 'd' or key == 'c':
-                    s3 = round(s3 * moveBindings[key])
+                    s3 = round(s3 + moveBindings[key])
                 elif key == 'f' or key == 'v':
-                    s4 = round(s4 * moveBindings[key])
+                    s4 = round(s4 + moveBindings[key])
                 elif key == 'g' or key == 'b':
-                    s5 = round(s5 * moveBindings[key])
+                    s5 = round(s5 + moveBindings[key])
                 elif key == 'h' or key == 'n':
-                    s6 = round(s6 * moveBindings[key])
+                    s6 = round(s6 + moveBindings[key])
 
                 print(vels(runtime, s1, s2, s3, s4, s5, s6))
 

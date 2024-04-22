@@ -13,6 +13,7 @@ class LeArm(Node):
         super().__init__('learm_node')
         self.subscription = self.create_subscription(UInt16MultiArray, 'arm_control', self.cmd_angle_callback, 10)
         self.ser = serial.Serial(port, baud, timeout = 1)
+        self.get_logger().info('LeArm node is working...')
 
 
     def map_angle_to_pwm(self, value):
